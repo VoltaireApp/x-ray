@@ -238,7 +238,7 @@ function WalkHTML(xray, selector, scope, filters) {
             return next()
         }, function (err, obj) {
             if (err) return fn(err)
-            fn(null, obj, $)
+            return fn(null, obj, $)
         })
     }
 }
